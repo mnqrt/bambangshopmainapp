@@ -77,6 +77,11 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Dalam pola Observer, kebutuhan akan antarmuka atau sifat tergantung pada kompleksitas struktur observer. Jika observer memiliki banyak jenis dan kelas, maka sifat diperlukan untuk mempermudah implementasinya. Tetapi, dalam kasus BambangShop di mana hanya ada satu kelas Observer, yaitu Subscriber, tidak perlu ada sifat tambahan. Dalam konteks BambangShop, sebuah Model struct tunggal sudah cukup untuk mengelola observasi perubahan. Jadi, tidak perlu memperkenalkan antarmuka tambahan.
+
+2. Untuk efisiensi pemetaan antara produk dan subscriber, kita membutuhkan DashMap. Jika menggunakan Vec, perlu membuat dua Vec terpisah untuk setiap produk, yang dapat menyulitkan pengelolaan data. DashMap mempermudah akses dan pemeliharaan data dengan pemetaan langsung antara produk dan subscriber.
+
+3. Dalam pemrograman Rust, kepatuhan ketat dari kompiler memastikan keamanan program dalam hal thread. Dalam kasus variabel statis Daftar Pelanggan (SUBSCRIBERS), DashMap digunakan untuk memastikan penggunaan HashMap oleh thread aman. Pertimbangkan apakah DashMap masih diperlukan atau pola Singleton dapat digunakan sebagai alternatif.
 
 #### Reflection Publisher-2
 
