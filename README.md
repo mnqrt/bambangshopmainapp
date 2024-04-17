@@ -84,5 +84,10 @@ This is the place for you to write reflections:
 3. Dalam pemrograman Rust, kepatuhan ketat dari kompiler memastikan keamanan program dalam hal thread. Dalam kasus variabel statis Daftar Pelanggan (SUBSCRIBERS), DashMap digunakan untuk memastikan penggunaan HashMap oleh thread aman. Pertimbangkan apakah DashMap masih diperlukan atau pola Singleton dapat digunakan sebagai alternatif.
 
 #### Reflection Publisher-2
+1. Dalam pola MVC, Model bertanggung jawab atas penyimpanan data dan logika bisnis. Untuk mematuhi prinsip tanggung jawab tunggal, diperlukan pemisahan antara "Service" dan "Repository". Ini memungkinkan pembagian tanggung jawab yang jelas, di mana "Service" menangani logika aplikasi sementara "Repository" mengelola akses data. Pemisahan ini meningkatkan modularitas dan membuat pengembangan serta pemeliharaan kode menjadi lebih mudah.
+
+2. Jika hanya menggunakan Model tanpa lapisan tambahan, program akan memiliki ketergantungan yang kuat. Ini berarti bahwa perubahan akan memengaruhi banyak bagian kode, meningkatkan kompleksitasnya karena keterikatan erat antara komponen-komponennya. Dengan kata lain, penggunaan Model tanpa lapisan tambahan akan membuat kode sulit dipelihara karena perubahan pada satu bagian dapat memiliki dampak luas pada bagian lainnya.
+
+3. Saya telah meningkatkan pemahaman saya tentang Postman, sebuah alat yang sangat berguna dalam pengujian aplikasi yang saya kembangkan. Dengan Postman, saya dapat memverifikasi apakah respons aplikasi sesuai dengan harapan berdasarkan permintaan yang saya buat. Saya juga dapat menyesuaikan metode pengujian, termasuk operasi CRUD, untuk memastikan keakuratan data. Beberapa fitur yang saya temukan berguna adalah kemampuan untuk mengatur dan menyimpan koleksi permintaan HTTP, mengotomatisasi pengujian menggunakan skrip, serta menyediakan lingkungan terisolasi untuk menguji integrasi dengan API eksternal. Saya juga menghargai fitur pengujian otomatis yang memungkinkan saya menjalankan serangkaian tes secara berkala untuk memastikan konsistensi dan kualitas aplikasi.
 
 #### Reflection Publisher-3
